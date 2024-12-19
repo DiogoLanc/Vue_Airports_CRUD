@@ -1,26 +1,33 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <h1 class = "tittle">Airport Manager - Control and Manage Your Airports</h1>
+    <AirportForm v-on:add-airport="addAirport" />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AirportForm from "./components/AirportForm.vue";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  components: { AirportForm },
+  data() {
+    return {
+      airports: [],
+    };
+  },
+  methods: {
+    addAirport(newAirport) {
+      this.airports.push(newAirport);
+      console.log("Airport added:", newAirport);
+    },
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+<style scoped>
+.tittle {
+  font-weight: bold;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin-bottom: 30px;
 }
 </style>

@@ -15,7 +15,7 @@ To run this application locally, you need:
 
    Open the terminal and clone the repository to your local machine:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/DiogoLanc/Vue_Airports_CRUD.git
    cd <repository-folder>
 
 2. **Install Dependencies**

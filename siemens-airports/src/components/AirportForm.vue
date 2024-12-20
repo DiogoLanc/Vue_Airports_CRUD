@@ -1,4 +1,6 @@
 <template>
+  <div>
+    <h2>Add a New Airport</h2>
     <form v-on:submit.prevent="handleSubmit">
       <div class="form-group">
         <label for="iata">IATA Code:</label>
@@ -18,9 +20,10 @@
       </div>
       <button type="submit" class="button-submit">Add Airport</button>
     </form>
-  </template>
+  </div>
+</template>
   
-  <script>
+<script>
   export default {
     data() {
       return {
@@ -31,6 +34,7 @@
       };
     },
     methods: {
+      
       convertToUppercase() {
         this.iata = this.iata.toUpperCase();
       },
@@ -40,18 +44,18 @@
         
         let isValid = true;
 
-        // verificar se iata é vazio
+        // check if iata is empty
         if (this.iata === "") {
           this.iataError = "IATA code is required.";
           isValid = false;
-          // verificar 3 Maiusculas
+          // check if matches 3 uppercase letters
         } else if (!this.iata.match(/^[A-Z]{3}$/)) {
          
           this.iataError = "IATA code must be 3 uppercase letters.";
           isValid = false;
         }
 
-        // verificar se nome é vazio
+        // check if name is empty
         if (this.name === "") {
           this.nameError = "Airport name is required.";
           isValid = false;
@@ -61,6 +65,7 @@
       },
 
       handleSubmit() {
+        // if validate returns true
         if (this.validate()) {
           this.$emit("add-airport", { iata: this.iata, name: this.name });
           this.iata = "";
@@ -69,10 +74,14 @@
       },
     },
   };
-  </script>
+</script>
   
-  <style scoped>
+<style scoped>
   
+  h2 {
+    margin-bottom: 1em;
+  }
+
   .form-group {
     display: flex;
     align-items: center; 
@@ -102,13 +111,15 @@
     font-weight: bold; 
     border: none; 
     border-radius: 3px; 
+    margin-top: 5px;
     cursor: pointer; 
   }
 
   .button-submit:hover {
     background-color: #279119; 
   }
-  </style>
+
+</style>
   
   
   

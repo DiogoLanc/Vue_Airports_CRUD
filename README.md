@@ -30,5 +30,7 @@ To run this application locally, you need:
    ```bash
    http://localhost:8080
 
+## Technical Decisions
+
       
 

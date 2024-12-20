@@ -40,23 +40,24 @@
         
         let isValid = true;
 
-        // Check if IATA is empty
+        // verificar se iata é vazio
         if (this.iata === "") {
           this.iataError = "IATA code is required.";
           isValid = false;
+          // verificar 3 Maiusculas
         } else if (!this.iata.match(/^[A-Z]{3}$/)) {
-          // Check if IATA matches the pattern
+         
           this.iataError = "IATA code must be 3 uppercase letters.";
           isValid = false;
         }
 
-        // Check if name is empty
+        // verificar se nome é vazio
         if (this.name === "") {
           this.nameError = "Airport name is required.";
           isValid = false;
         }
 
-        return isValid; // Only return true if all validations pass
+        return isValid; 
       },
 
       handleSubmit() {

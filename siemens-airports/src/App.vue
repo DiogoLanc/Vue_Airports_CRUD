@@ -2,7 +2,10 @@
   <div id="app">
     <h1 class = "tittle">Airport Manager - Control and Manage Your Airports</h1>
     <AirportForm v-on:add-airport="addAirport" />
-    <AirportList :airports="airports" v-on:delete-airport="deleteAirport" />
+    <AirportList :airports="airports" 
+                  v-on:delete-airport="deleteAirport" 
+                  v-on:update-airport="updateAirport"
+    />
   </div>
 </template>
 
@@ -18,24 +21,32 @@ export default {
     };
   },
   methods: {
+
+    // adicionar aeroporto
     addAirport(newAirport) {
       this.airports.push(newAirport);
       localStorage.setItem("airports", JSON.stringify(this.airports));
-      console.log("Airport added:", newAirport);
     },
 
+    // apagar aeroporto
     deleteAirport(index) {
       this.airports.splice(index, 1);
       localStorage.setItem("airports", JSON.stringify(this.airports));
-    }
+    },
+
+    // atualizar aeroporto 
+    updateAirport(index, updatedAirport) {
+      this.airports.splice(index, 1, updatedAirport);
+      localStorage.setItem("airports", JSON.stringify(this.airports));
+    },
   },
 };
 </script>
 
 <style scoped>
   #app {
-    background-color: #e4e4e4; /* Example solid background color */
-    color: black; /* Adjust text color */
+    background-color: #e4e4e4; 
+    color: black; 
   }
 
 </style>

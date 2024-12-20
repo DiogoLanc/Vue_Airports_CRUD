@@ -35,8 +35,8 @@ To run this application locally, you need:
 I chose a parent-child component structure, similar to what I learned in React. The **App.vue** component serves as the main container and manages the state of the application, while the **AirportForm** and **AirportList** components handle specific responsibilities:
 
 - **App Component**: Manages the overall state and persists data in local storage. It interacts with child components through props and event emitters:
-- Event emitters allow the App component to listen for actions (such as adding, updating, or deleting an airport) from the child components.
-- Props pass data (such as the list of airports) to the child components, enabling them to function correctly.
+     - Event emitters allow the App component to listen for actions (such as adding, updating, or deleting an airport) from the child components.
+     - Props pass data (such as the list of airports) to the child components, enabling them to function correctly.
 - **AirportForm Component**: Handles user input for adding new airports and emits an **add-airport** event to the parent.
 - **AirportList Component**: Displays the list of airports and provides functionality for editing and deleting airports. It emits **delete-airport** and **update-airport** events to the parent.
 

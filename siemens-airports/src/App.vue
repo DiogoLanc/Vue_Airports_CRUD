@@ -2,7 +2,7 @@
   <div id="app">
     <h1 class = "tittle">Airport Manager - Control and Manage Your Airports</h1>
     <AirportForm v-on:add-airport="addAirport" />
-    <AirportList :airports="airports"/>
+    <AirportList :airports="airports" v-on:delete-airport="deleteAirport" />
   </div>
 </template>
 
@@ -23,6 +23,11 @@ export default {
       localStorage.setItem("airports", JSON.stringify(this.airports));
       console.log("Airport added:", newAirport);
     },
+
+    deleteAirport(index) {
+      this.airports.splice(index, 1);
+      localStorage.setItem("airports", JSON.stringify(this.airports));
+    }
   },
 };
 </script>

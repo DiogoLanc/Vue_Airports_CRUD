@@ -16,9 +16,7 @@ To run this application locally, you need:
    Open the terminal and clone the repository to your local machine:
    ```bash
    git clone https://github.com/DiogoLanc/Vue_Airports_CRUD.git
-   
    cd Vue_Airports_CRUD
-   
    cd siemens-airports
 
 2. **Install Dependencies**

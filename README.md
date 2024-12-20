@@ -40,6 +40,4 @@ I chose a parent-child component structure, similar to what I learned in React. 
 - **AirportForm Component**: Handles user input for adding new airports and emits an **add-airport** event to the parent.
 - **AirportList Component**: Displays the list of airports and provides functionality for editing and deleting airports. It emits **delete-airport** and **update-airport** events to the parent.
 
-
-      
-
+I initially considered breaking down the project into three components (one more for displaying individual airport items), but given my limited experience with Vue, I decided that having just two components, AirportForm for form submission and AirportList for displaying and managing the airport list, would provide a more manageable and clear structure for this project.

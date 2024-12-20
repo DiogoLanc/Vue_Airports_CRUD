@@ -13,7 +13,7 @@ To run this application locally, you need:
 
 1. **Clone the Repository**
 
-   Open a terminal and clone the repository to your local machine:
+   Open the terminal and clone the repository to your local machine:
    ```bash
    git clone <repository-url>
    cd <repository-folder>

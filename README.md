@@ -8,3 +8,13 @@ To run this application locally, you need:
 
 - Node.js - https://nodejs.org/ 
 - npm - https://www.npmjs.com/
+
+## Setup Instructions
+
+1. **Clone the Repository**  
+   Open a terminal and clone the repository to your local machine:
+   ```bash
+   git clone <repository-url>
+   cd <repository-folder>
+
+

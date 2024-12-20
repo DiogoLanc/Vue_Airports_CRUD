@@ -51,7 +51,7 @@ export default {
     },
 
     saveEdit(index) {
-      // check again data validation
+      // check data validation again
       if (!this.editingIata.match(/^[A-Z]{3}$/)) {
         alert("IATA code must be 3 uppercase letters.");
         return;

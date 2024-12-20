@@ -22,3 +22,13 @@ To run this application locally, you need:
    ```bash
    npm install
 
+3. **Run the Application**
+   ```bash
+   npm run serve
+
+4. **Access the Application**
+   ```bash
+   http://localhost:8080
+
+      
+

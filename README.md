@@ -38,7 +38,7 @@ I chose a parent-child component structure, similar to what I learned in React. 
 - **App Component**: Manages the overall state and persists data in local storage. It interacts with child components through props and event emitters:
      - **Event emitters** allow the App component to listen for actions (such as adding, updating, or deleting an airport) from the child components.
      - **Props** pass data (list of airports) to the **AirportList Component**, enabling it to function correctly.
-- **AirportForm Component**: Handles user input for adding new airports and emits an **add-airport** event to the parent.
-- **AirportList Component**: Displays the list of airports and provides functionality for editing and deleting airports. It emits **delete-airport** and **update-airport** events to the parent.
+- **AirportForm Component**: Handles user input and does the validation for adding new airports (IATA code and Name) and emits an **add-airport** event to the parent.
+- **AirportList Component**: Displays the list of airports and provides functionality for editing and deleting airports. Responsible for the validation in the editing. It emits **delete-airport** and **update-airport** events to the parent.
 
 I initially considered breaking down the project into three components (one more for displaying individual airport items), but given my limited experience with Vue, I decided that having just two components, AirportForm for form submission and AirportList for displaying and managing the airport list, would provide a more manageable and clear structure for this project.

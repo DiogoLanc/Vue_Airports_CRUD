@@ -16,18 +16,21 @@ To run this application locally, you need:
    Open the terminal and clone the repository to your local machine:
    ```bash
    git clone https://github.com/DiogoLanc/Vue_Airports_CRUD.git
+   ```
+   Go to the main folder:
+   ```bash
    cd Vue_Airports_CRUD
    cd siemens-airports
-
-2. **Install Dependencies**
+   
+3. **Install Dependencies**
    ```bash
    npm install
 
-3. **Run the Application**
+4. **Run the Application**
    ```bash
    npm run serve
 
-4. **Access the Application**
+5. **Access the Application**
    ```bash
    http://localhost:8080
 

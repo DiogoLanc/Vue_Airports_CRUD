@@ -29,6 +29,8 @@ To run this application locally, you need:
 4. **Run the Application**
    ```bash
    npm run serve
+   ```
+   Note: The project was initially set up using **npm install -g @vue/cli** to create the Vue application instead of the more recent **npm create vue@latest** command. As a result, there are some deprecated dependencies. These deprecated files were only noticed after completing the project. However, it is important to note that the project works as intended, and all features function correctly without any issues.
 
 5. **Access the Application**
    ```bash
